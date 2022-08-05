@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect} from "react";
+import { useDispatch} from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -9,7 +9,6 @@ import NewPost from "./pages/NewPost";
 import Posts from "./pages/Posts";
 import { PostsActionsType } from "./redux/postReducer";
 import { RootState } from "./redux/reducer";
-import { IPosts } from "./types";
 
 function App() {
   const dispatch = useDispatch();
