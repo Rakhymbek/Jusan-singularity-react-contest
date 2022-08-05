@@ -19,7 +19,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<Posts posts={posts}/>} />
-        <Route path="/new" element={<NewPost />} />
+        <Route path="/new" element={<NewPost posts={posts} setPosts={setPosts}/>} />
       </Routes>
     </BrowserRouter>
   );

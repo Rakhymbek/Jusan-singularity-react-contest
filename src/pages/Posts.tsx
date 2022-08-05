@@ -8,7 +8,7 @@ const Posts = ({ posts }: PostsProps) => {
     <Container sx={{ mt: 2 }} maxWidth={"lg"}>
       <ul>
         {posts.map((item) => (
-          <Post post={item} />
+          <Post key={item.id} post={item} />
         ))}
       </ul>
     </Container>
