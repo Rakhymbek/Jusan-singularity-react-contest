@@ -1,40 +1,40 @@
 import { Button, Container, TextField } from "@mui/material";
 import React, { useCallback, useState } from "react";
+import { useDispatch } from "react-redux";
+import { PostsActionsType } from "../redux/postReducer";
 import { IPosts } from "../types";
 
-interface NewPostProps {
-  posts: IPosts[];
-  setPosts: (Post: IPosts[]) => void;
-}
 
-const NewPost = ({ setPosts, posts }: NewPostProps) => {
+const NewPost = () => {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState<string>("");
   const [body, setBody] = useState<string>("");
 
   const AddNewPost = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
-      const postData = {
+      const postData: IPosts = {
         id: Date.now(),
         userId: Date.now(),
         title,
         body,
       };
-      setPosts([postData, ...posts]);
+      console.log(postData);
+      dispatch({ type: PostsActionsType.ADD_POST, payload: postData });
       setTitle("");
       setBody("");
     },
-    [title, body, setPosts, posts]
+    [title, body, dispatch]
   );
 
   return (
-    <Container maxWidth="lg" sx={{mt: 2}}>
+    <Container maxWidth="lg" sx={{ mt: 2 }}>
       <form>
         <TextField
           type={"text"}
           placeholder="Post Title"
           value={title}
-          sx={{mr: 2}}
+          sx={{ mr: 2 }}
           onChange={(e) => setTitle(e.target.value)}
         />
         <TextField
@@ -47,7 +47,7 @@ const NewPost = ({ setPosts, posts }: NewPostProps) => {
           variant="outlined"
           onClick={AddNewPost}
           disabled={!title && !body}
-          sx={{display: 'block', mt: 2}}
+          sx={{ display: "block", mt: 2 }}
         >
           Create Post
         </Button>
