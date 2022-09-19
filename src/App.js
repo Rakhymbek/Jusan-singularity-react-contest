@@ -11,8 +11,10 @@ import News from "./components/News";
 
 const App = () => {
   const count = useSelector((store) => store.counter.count);
-  const latestNews = useSelector((store) => store?.news?.latestNews || []);
-  const popularNews = useSelector((store) => store?.news?.popularNews || []);
+  const { latestNews, popularNews } = useSelector((store) => store?.news || {});
+  const { latestNewsError, popularNewsError } = useSelector(
+    (store) => store?.errors || {}
+  );
 
   const dispatch = useDispatch();
   const handleIncrease = () => {
@@ -57,8 +59,8 @@ const App = () => {
       >
         <Typography variant='h4'>Get News</Typography>
       </Button>
-      <News news={latestNews} title='Latest News' />
-      <News news={popularNews} title='Popular News' />
+      <News news={latestNews} error={latestNewsError} title='Latest News' />
+      <News news={popularNews} error={popularNewsError} title='Popular News' />
     </Container>
   );
 };
