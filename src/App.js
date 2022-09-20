@@ -1,67 +1,22 @@
-import { useSelector, useDispatch } from "react-redux";
-import {
-  increaseCount,
-  decreaseCount,
-  getLatestNews,
-  getNews,
-} from "./redux/actions/actionCreator";
-import { Button, Container, Typography, Box } from "@mui/material";
-import { Add, Remove } from "@mui/icons-material";
-import News from "./components/News";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import { Container } from "@mui/material";
+import React from "react";
+import ParticlesComponent from "./components/particle/Particle";
 
-const App = () => {
-  const count = useSelector((store) => store.counter.count);
-  const { latestNews, popularNews } = useSelector((store) => store?.news || {});
-  const { latestNewsError, popularNewsError } = useSelector(
-    (store) => store?.errors || {}
-  );
-
-  const dispatch = useDispatch();
-  const handleIncrease = () => {
-    dispatch(increaseCount());
-  };
-
-  const handleDecrease = () => {
-    dispatch(decreaseCount());
-  };
-
-  const handleNews = () => {
-    dispatch(getNews());
-  };
-
+const App = ({ children }) => {
   return (
-    <Container maxWidth={"1280px"} sx={{ p: 3, textAlign: "center" }}>
-      <Typography variant='h2' textTransform={"capitalize"}>
-        redux-saga {count}
-      </Typography>
-      <Box>
-        <Button
-          onClick={handleIncrease}
-          variant='contained'
-          sx={{ width: 150, py: 2, mr: 2 }}
-        >
-          <Add fontSize='large' />
-        </Button>
-        <Button
-          onClick={handleDecrease}
-          variant='contained'
-          color='error'
-          sx={{ width: 150, py: 2 }}
-        >
-          <Remove fontSize='large' />
-        </Button>
-      </Box>
-      <Button
-        onClick={handleNews}
-        variant='contained'
-        color='secondary'
-        sx={{ my: 4, py: 2 }}
+    <React.Fragment>
+      <Header />
+      <Container
+        maxWidth={"1280px"}
+        sx={{ p: 3, textAlign: "center", flex: "1 1 auto" }}
       >
-        <Typography variant='h4'>Get News</Typography>
-      </Button>
-      <News news={latestNews} error={latestNewsError} title='Latest News' />
-      <News news={popularNews} error={popularNewsError} title='Popular News' />
-    </Container>
+        {children}
+      </Container>
+      <Footer />
+      <ParticlesComponent/>
+    </React.Fragment>
   );
 };
 

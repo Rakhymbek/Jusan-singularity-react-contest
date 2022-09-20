@@ -1,4 +1,5 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
 import "./News.css";
 
 const News = ({ news, title, error }) => {
@@ -21,10 +22,10 @@ const News = ({ news, title, error }) => {
             author,
           }) => (
             <li key={objectID} className='news'>
-              <div className='description'>
-                <a href={url} className='news-title'>
+              <Box className='description'>
+                <NavLink href={url} className='news-title'>
                   {title || "No title"}
-                </a>
+                </NavLink>
                 <span className='text'>{`${points || 0} points`}</span>
                 <span className='comments'>{`${
                   num_comments || 0
@@ -33,7 +34,7 @@ const News = ({ news, title, error }) => {
                   {new Date(created_at).toLocaleDateString()}
                 </span>
                 <span className='author'>{author || "no author"}</span>
-              </div>
+              </Box>
             </li>
           )
         )}
