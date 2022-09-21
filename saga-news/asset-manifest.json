@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Jusan-singularity-react-contest/saga-news/static/css/main.49e1d6b7.css",
-    "main.js": "/Jusan-singularity-react-contest/saga-news/static/js/main.db8243ab.js",
+    "main.js": "/Jusan-singularity-react-contest/saga-news/static/js/main.5591a08a.js",
     "index.html": "/Jusan-singularity-react-contest/saga-news/index.html",
     "main.49e1d6b7.css.map": "/Jusan-singularity-react-contest/saga-news/static/css/main.49e1d6b7.css.map",
-    "main.db8243ab.js.map": "/Jusan-singularity-react-contest/saga-news/static/js/main.db8243ab.js.map"
+    "main.5591a08a.js.map": "/Jusan-singularity-react-contest/saga-news/static/js/main.5591a08a.js.map"
   },
   "entrypoints": [
     "static/css/main.49e1d6b7.css",
-    "static/js/main.db8243ab.js"
+    "static/js/main.5591a08a.js"
   ]
 }
