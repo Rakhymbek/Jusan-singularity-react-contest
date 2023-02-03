@@ -1,51 +1,73 @@
-# Jusan-singularity-react-contest
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo"/></a>
+</p>
 
-### Общие правила контеста
-- Контест расчитан на одного участника 
-- Не списывать у дргих участников
-- Ознакомиться с ["Требование Контеста"](#требование-контеста)
-- Ознакомиться с ["Инструкция по выполнению контеста"](#инструкция-по-выполнению-контеста)
-- Ознакомиться с ["Оценка контеста"](#оценка-контеста)
-- Время на ознакомление ~ 10 min 
-- Выделеное время на задание ~ 90 min (1.5h)
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-### Инструкция по выполнению контеста 
-1. Нужно сделать [fork](https://github.com/toleberdyyeva/Jusan-singularity-react-contest/fork) этого репозитироия на свой аккаунт `github` 
-2. Работаете в создавшем репозиторие на своем аккаунте 
-4. По завершению отправить форму. [Перейти по ссылке](https://forms.gle/1kngM1aGm8hdz6g58)
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Description
 
-### Требование Контеста
-- Поднять [**react**](https://ru.reactjs.org/) ->`SUM 10 points` 
-  - Использовать [**create-react-app**](https://create-react-app.dev/) `REQUIRED`
-  - Использовать [**typescript**](https://www.typescriptlang.org/) `REQUIRED`
-- Страницы и Фичи -> `SUM 25 points` + `with extra 10 points`
-  - Использовать [**react-Router**](https://reactrouter.com/) `REQUIRED`
-  - Вёрстка: Список Постов: `"/"` - Список постов -> `10 points`
-  - Вёрстка: Создание Поста: `"/new"` - Создание поста  -> `15 points`
-  - `EXTRA` Редактирование Поста `"/edit/:post_id"` - Редактирование поста  -> `extra 10 points`
-- Вёрстка -> `SUM 0 points` + `with extra 20 points`
-  - Макеты по вёрстке могут быть любыми на ваш вкус!
-  - `EXTRA` Использовать  [**styled-components**](https://styled-components.com/)  -> `extra 10 points`
-  - `EXTRA` Дизайн (творческая работа/ оценка UI/UX)  -> `extra 10 points`
-- Работа с запросами/ сервисами -> `SUM 25 points` + `with extra 5 points`
-  - Использовать [**axios**](https://github.com/axios/axios) `REQUIRED`
-  - API для работы с постами - [**jsonplaceholder**](https://jsonplaceholder.typicode.com/guide/) `REQUIRED`
-    - `EXTRA` Использовать `axiosCreate` -> `extra 5 points` 
-- Глобальное хранение и Обробатывание Side-Effect -> `SUM 45 points` + `with extra 10 points`
-  - Использование [**redux-toolkit**](https://redux-toolkit.js.org/) -> `20 points`
-  - Использование [**redux-saga**](https://redux-saga.js.org/) -> `25 points`
-    - `EXTRA` Использование [**reselect**](https://github.com/reduxjs/reselect) -> `extra 10 points`
-    
-### Оценка контеста
-- `Points` по требованием контеста
-  - Основные: `105/105 Points`
-  - Extra: `45/45 Points`
-- Читаемость кода и Чистота кода: `5/5 Points`
-- Покрытие Typescript на `Interface`: `5/5 Points`
-- Чистота комитов и История комитов: `5/5 Points`
-- `OVERALL MAXIMUM: 165 Points`
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Installation
 
+```bash
+$ npm install
+```
 
- >Good luck and may force be with you!
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](LICENSE).
